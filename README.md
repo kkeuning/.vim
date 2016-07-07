@@ -8,7 +8,7 @@ brew install the_silver_searcher
 Install iTerm2 colorscheme as base16-tomorrow.dark
 Install and configure fish shell with base16 shell support
 
-Install patched powerline fonts.  Configure iTerm2 to use Inconsolata 
+Install patched powerline fonts.  Configure iTerm2 to use Source Code Pro for Powerline (aka Sauce Code Pro) 
 
 https://github.com/powerline/fonts
 
