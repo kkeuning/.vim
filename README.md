@@ -14,7 +14,6 @@ https://github.com/powerline/fonts
 
 ```
 vim
-
 :PlugInstall
 ```
 
