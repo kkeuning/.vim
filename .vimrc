@@ -46,7 +46,9 @@ Plug 'elzr/vim-json', {'for' : 'json'}
 Plug 'ekalinin/Dockerfile.vim', {'for' : 'Dockerfile'}
 Plug 'fatih/vim-nginx' , {'for' : 'nginx'}
 Plug 'corylanou/vim-present', {'for' : 'present'}
+Plug 'edkolev/tmuxline.vim'
 "Plug 'itchyny/lightline.vim' "lightline or airline, not both
+Plug 'exu/pgsql.vim'
 
 function! DoRemote(arg)
   UpdateRemotePlugins
@@ -77,7 +79,8 @@ set nu
 
 syntax on
 let g:airline_powerline_fonts = 1
-set guifont=Inconsolata\ for\ Powerline:h18
+"let g:airline_powerline_fonts = 0
+set guifont=Source\ Code\ Pro\ for\ Powerline:h18
 "nnoremap <Leader>t :ConqueTerm mix test<CR>
 nnoremap <Leader>b :ConqueTerm bash<CR>
 nnoremap <Leader>n :ConqueTerm node<CR>
@@ -95,6 +98,7 @@ let g:jsx_ext_required = 0
 highlight link xmlEndTag xmlTag
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
+  "let g:ackprg = 'pt -l'
 endif
 if has("gui_macvim")
     colors base16-tomorrow-night
@@ -103,7 +107,7 @@ if has("gui_macvim")
 else 
     "Spacegray is the fallback colorscheme
     "base16-tomorrow-night is preferred but will not work in all terminals
-    colors Spacegray
+"    colors Spacegray
     hi VertSplit ctermfg=59 ctermbg=59 term=NONE
     highlight LineNr ctermfg=grey
 endif
@@ -112,3 +116,4 @@ if has("nvim")
     "au GUIEnter * set fullscreen
     colors base16-tomorrow-night
 endif
+let g:sql_type_default = 'pgsql'
